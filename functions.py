@@ -38,3 +38,18 @@ user1 = fullname('jon', 'snow')
 print(user1)
 user2 = fullname('daenerys', 'targaryen', 'stormborn')
 print(user2)
+
+#Using a function with a while loop
+def fullname(firstname, lastname):
+    """Trying to get input from  user using while loop"""
+    name = f"{firstname} {lastname}"
+    return name.title()
+
+#This is an infinite loop
+while True:
+    print("\nPlease tell me your name...")
+    f_name = input("First name: ")
+    l_name = input("Last name: ")
+
+    formatted_name = fullname(f_name, l_name)
+    print(f"\nHello, {formatted_name}")
