@@ -78,3 +78,8 @@ while True:
 
     place_name = capital_country(cap, nat)
     print(f"\n{place_name}")
+
+#Making a dictionary in a function
+def build_person(first_name, last_name):
+    """Return a dicttionary of information about a person."""
+    person = {'first' : first_name, 'last' : last_name}
