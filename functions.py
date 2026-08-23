@@ -83,3 +83,6 @@ while True:
 def build_person(first_name, last_name):
     """Return a dicttionary of information about a person."""
     person = {'first' : first_name, 'last' : last_name}
+    return person
+music_director =build_person('harris', 'jayaraj')
+print(music_director)
