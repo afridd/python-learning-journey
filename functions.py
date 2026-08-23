@@ -45,11 +45,17 @@ def fullname(firstname, lastname):
     name = f"{firstname} {lastname}"
     return name.title()
 
-#This is an infinite loop
+#giving option to quit the loop
 while True:
     print("\nPlease tell me your name...")
+    print("\nEnter q at anytime to stop")
+
     f_name = input("First name: ")
+    if f_name == 'q':
+        break
     l_name = input("Last name: ")
+    if l_name == 'q':
+        break
 
     formatted_name = fullname(f_name, l_name)
-    print(f"\nHello, {formatted_name}")
+    print(f"\nHello, {formatted_name}!")
