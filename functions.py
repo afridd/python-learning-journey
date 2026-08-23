@@ -59,3 +59,22 @@ while True:
 
     formatted_name = fullname(f_name, l_name)
     print(f"\nHello, {formatted_name}!")
+
+#Function that retuns country and capital
+def capital_country(capital, country): 
+    """Return place fully formatted"""
+    place = f"{capital}, {country}"
+    return place
+while True:
+    print("Give the name of the capital and country")
+    print("Enter 'q' to stop")
+
+    cap = input("Capital: ")
+    if cap == 'q':
+        break
+    nat = input("Country: ")
+    if nat == 'q':
+        break
+
+    place_name = capital_country(cap, nat)
+    print(f"\n{place_name}")
