@@ -24,3 +24,17 @@ def describe_pet(animal_type, pet_name='Tom'):
     print(f"My {animal_type}'s name is {pet_name.title()}.\n")
     
 describe_pet('cat')
+
+#Returning values from functions
+def fullname(firstname, lastname, middlename=''):
+    """Return a full name, neatly formatted"""
+    if middlename:
+        name = f"{firstname} {middlename} {lastname}"
+    else:
+        name = f"{firstname} {lastname}"
+    return name.title()
+
+user1 = fullname('jon', 'snow')
+print(user1)
+user2 = fullname('daenerys', 'targaryen', 'stormborn')
+print(user2)
