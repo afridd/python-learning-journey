@@ -1,7 +1,6 @@
 #Defining a function
-def greet_user():
+def greet_user(username):
     """Displaying a simple message"""
-    print("Hello!")
+    print(f"Hello, {username.title()}!")
 
-greet_user()
-    
+greet_user("rose")
