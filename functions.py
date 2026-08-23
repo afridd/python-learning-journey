@@ -80,9 +80,20 @@ while True:
     print(f"\n{place_name}")
 
 #Making a dictionary in a function
-def build_person(first_name, last_name):
+def build_person(first_name, last_name,age=None):
     """Return a dicttionary of information about a person."""
     person = {'first' : first_name, 'last' : last_name}
+    if age:
+        person['age'] = age
     return person
-music_director =build_person('harris', 'jayaraj')
+music_director =build_person('harris', 'jayaraj', age=51)
 print(music_director)
+
+#passing a list
+def greet_users(names):
+    """Print a simple greeting to each user in the list."""
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+usernames = {'vijay', 'ajith', 'surya', 'karthi'}
+greet_users(usernames)
