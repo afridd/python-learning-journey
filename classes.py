@@ -18,8 +18,17 @@ class Car:
         """print a statement showing the car's milage."""
         print(f"This car has {self.odometer_reading} miles on it.")
 
+    def update_odometer(self, mileage):
+        """Set the odometer reading to the given value"""
+        self.odometer_reading = mileage
+
 my_new_car = Car('ferrari', 'laferrari', 2016)
 print(my_new_car.get_descriptive_name())
 
+#Modifying attribute values directly
 my_new_car.odometer_reading = 341
+my_new_car.read_odometer()
+
+#Modifying attribute values through a method
+my_new_car.update_odometer(354)
 my_new_car.read_odometer()
