@@ -141,12 +141,12 @@ send_msg(messages,sent_messages)
 sent_msg(sent_messages)
 
 #Passing arbitrary number of arguments
-def make_pizza(*toppings):
+def make_pizza(size,*toppings):
     """Summarize the pizza that we are about to make."""
-    print("\nMaking the pizza with the following toppings:")
+    print(f"\nMaking a {size}-inch pizza with the following toppings:")
     for topping in toppings:
         print(f"-{topping}")
 
-make_pizza('paneer')
-make_pizza('mushroom', 'capsicum', 'olive')
+make_pizza(16, 'paneer', 'extra cheese')
+make_pizza(8, 'mushroom', 'capsicum', 'olive')
 
