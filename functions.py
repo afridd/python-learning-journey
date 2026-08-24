@@ -1,4 +1,7 @@
 #Defining a function
+from turtle import st
+
+
 def greet_user(username):
     """Displaying a simple message"""
     print(f"Hello, {username.title()}!")
@@ -120,3 +123,19 @@ completed_models = []
 
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
+
+#Message semt list and function
+def send_msg(send, sent):
+    """Stimulate printing messages to be sent"""
+    while send:
+        storage = send.pop(0)
+        print(f"Sending {storage}...")
+        sent.append(storage)
+def sent_msg(sent):
+    """Show all the messages that were sent"""
+    for msg in sent:
+        print(f"Sent {msg}")
+messages = ['HI', 'How are you', 'Bye']
+sent_messages = []
+send_msg(messages,sent_messages)
+sent_msg(sent_messages)
