@@ -150,3 +150,16 @@ def make_pizza(size,*toppings):
 make_pizza(16, 'paneer', 'extra cheese')
 make_pizza(8, 'mushroom', 'capsicum', 'olive')
 
+#Using arbritary keyword arguments
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('Jon', 'Snow', 
+                             location='Winterfell', 
+                             field='King in the North',
+                             lover='Daenerys')
+
+print(user_profile)
