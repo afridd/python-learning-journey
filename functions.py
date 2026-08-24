@@ -160,6 +160,8 @@ def build_profile(first, last, **user_info):
 user_profile = build_profile('Jon', 'Snow', 
                              location='Winterfell', 
                              field='King in the North',
-                             lover='Daenerys')
+                             lover='Daenerys',
+                             Identity='Real King of the Seven Kingdoms')
 
 print(user_profile)
+
