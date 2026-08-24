@@ -139,3 +139,12 @@ messages = ['HI', 'How are you', 'Bye']
 sent_messages = []
 send_msg(messages,sent_messages)
 sent_msg(sent_messages)
+
+#Passing arbitrary number of arguments
+def make_pizza(*toppings):
+    """Print the list of toppping that have been requested"""
+    print(toppings)
+
+make_pizza('paneer')
+make_pizza('mushroom', 'capsicum', 'olive')
+
