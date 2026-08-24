@@ -158,8 +158,7 @@ user_profile = build_profile('Jon', 'Snow',
                              location='Winterfell', 
                              field='King in the North',
                              lover='Daenerys',
-                             Identity='Real King of the Seven Kingdoms'
+                             Identity='Real King of the Seven Kingdoms',
                              real_name='Aegon Targaryen')
 
 print(user_profile)
-
