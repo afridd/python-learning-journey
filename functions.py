@@ -97,3 +97,21 @@ def greet_users(names):
         print(msg)
 usernames = {'vijay', 'ajith', 'surya', 'karthi'}
 greet_users(usernames)
+
+#modifying a list in a function
+# Start with some designs that need to be printed
+unprinted_designs = ['phone case', 'robot pendant','car toy']
+completed_models = []
+
+#Stimulating printing each design, until none are left.
+#Move each design ro completed_models after printing.
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print(f"Printing model: {current_design}")
+    completed_models.append(current_design)
+
+#displaying all completed models.
+print ("\nThe following models have been printed...")
+for completed_model in completed_models:
+    print(completed_model)
+    
