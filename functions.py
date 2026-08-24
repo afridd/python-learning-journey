@@ -142,8 +142,10 @@ sent_msg(sent_messages)
 
 #Passing arbitrary number of arguments
 def make_pizza(*toppings):
-    """Print the list of toppping that have been requested"""
-    print(toppings)
+    """Summarize the pizza that we are about to make."""
+    print("\nMaking the pizza with the following toppings:")
+    for topping in toppings:
+        print(f"-{topping}")
 
 make_pizza('paneer')
 make_pizza('mushroom', 'capsicum', 'olive')
