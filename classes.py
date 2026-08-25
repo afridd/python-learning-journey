@@ -87,3 +87,24 @@ my_royce = ElectricCar('rollsroyce', 'spectre', 2026)
 print(my_royce.get_descriptive_name())
 my_royce.battery.describe_battery()
 my_royce.battery.get_range()
+
+#Icecream stand class that stores a list of icecream flavours
+class Icecreamshop:
+    """Represent an icecream shop"""
+
+    def __init__(self, shop_name, flavours):
+        self.shop_name = shop_name
+        self.flavours = flavours
+
+    def describe_shop(self):
+        """Display the shop name and available flavours"""
+        print(f"{self.shop_name} serves delicious {self.flavours} icecream")
+    
+    def open_shop(self):
+        """Display a message indicating the shop is open."""
+        print(f"{self.shop_name} is now open.")
+
+shop = Icecreamshop("Badkin Robin", "Chocolate")
+
+shop.describe_shop()
+shop.open_shop()
