@@ -42,10 +42,23 @@ my_new_car.update_odometer(348)
 my_new_car.read_odometer()
 
 #Incrementing an attributes value  through a method
-my_used_car = Car('Mazda', 'rx7', '2008')
+my_used_car = Car('Mazda', 'rx7', 2008)
 print(my_used_car.get_descriptive_name())
 
 my_used_car.update_odometer(23500)
 my_used_car.read_odometer()
 my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
+
+#Inheritance
+#The __init__() method for a child class
+
+class ElectricCar(Car):
+    """Represemt aspects of a car, specific to electric vehicles."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+        super().__init__(make, model, year)
+
+my_royce = ElectricCar('rollsroyce', 'spectre', 2026)
+print(my_royce.get_descriptive_name())
