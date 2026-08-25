@@ -53,18 +53,25 @@ my_used_car.read_odometer()
 #Inheritance
 #The __init__() method for a child class
 
+class Battery:
+    """A simple attemp to model a battery for an electric car"""
+
+    def __init__(self, battery_size=102):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+    
 class ElectricCar(Car):
     """Represemt aspects of a car, specific to electric vehicles."""
 
     def __init__(self, make, model, year):
         """Initialize attributes of the parent class."""
         super().__init__(make, model, year)
-        self.battery_size = 102
-
-    def describe_battery(self):
-        """Print statement describing the battery size."""
-        print(f"This car has a {self.battery_size}-kWh battery.")
+        self.battery = Battery()
 
 my_royce = ElectricCar('rollsroyce', 'spectre', 2026)
 print(my_royce.get_descriptive_name())
-my_royce.describe_battery()
+my_royce.battery.describe_battery()
