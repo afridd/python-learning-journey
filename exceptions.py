@@ -1,4 +1,4 @@
-#Using exceptions to prevent crashes
+#Using exceptions to prevent crashe
 
 print("Give two numbers to divide...")
 print("Enter q to quit")
