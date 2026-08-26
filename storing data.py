@@ -26,5 +26,6 @@ def greet_user():
         values = json.dumps(username)
         location.write_text(values)
         print(f"We'll remember youu when you come back, {username}!")
+        
 
 greet_user()
