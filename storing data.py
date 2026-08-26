@@ -6,9 +6,17 @@ path = Path("python-learning-journey/numbers.json")
 contents = json.dumps(numbers)
 path.write_text(contents)
 
-username = input("What is your name? ")
-location = Path("python-learning-journey/usernames.json")
-values = json.dumps(username)
-location.write_text(values)
+def greet_user():
+    """Greet the user by name."""
+    location = Path("python-learning-journey/usernames.json")
+    if location.exists():
+        values = location.read_text()
+        username = json.loads(values)
+        print(f"Welcome back, {username}!")
+    else:
+        username = input("What is your name? ")
+        values = json.dumps(username)
+        location.write_text(values)
+        print(f"We'll remember youu when you come back, {username}!")
 
-print(f"We'll remember youu when you come back, {username}!")
+greet_user()
