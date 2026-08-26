@@ -13,6 +13,6 @@ while True:
     try:
         answer = int(first_number)/int(second_number)
     except ZeroDivisionError:
-        print("You can not divide by zero!")
+        print("You can not divide by zero!") #Use pass to silently hide failures
     else:
         print(answer)
