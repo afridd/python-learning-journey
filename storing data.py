@@ -6,12 +6,20 @@ path = Path("python-learning-journey/numbers.json")
 contents = json.dumps(numbers)
 path.write_text(contents)
 
+def get_stored_username(location):
+    """Get stored username if available"""
+    if location.exists():
+            values = location.read_text()
+            username = json.loads(values)
+            return username
+    else:
+         return None
+    
 def greet_user():
     """Greet the user by name."""
     location = Path("python-learning-journey/usernames.json")
-    if location.exists():
-        values = location.read_text()
-        username = json.loads(values)
+    username = get_stored_username(location)
+    if username:
         print(f"Welcome back, {username}!")
     else:
         username = input("What is your name? ")
