@@ -104,7 +104,13 @@ class Icecreamshop:
         """Display a message indicating the shop is open."""
         print(f"{self.shop_name} is now open.")
 
-shop = Icecreamshop("Badkin Robin", "Chocolate")
+shop_one = Icecreamshop("Baskin Robin", "Chocolate")
+shop_two = Icecreamshop("Richie Rich", "Mango")
+shop_three = Icecreamshop("Arun Icecreams", "Vanilla")
 
-shop.describe_shop()
-shop.open_shop()
+shop_one.describe_shop()
+shop_one.open_shop()
+shop_two.describe_shop()
+shop_two.open_shop()
+shop_three.describe_shop()
+shop_three.open_shop()
