@@ -14,6 +14,14 @@ def get_stored_username(location):
             return username
     else:
          return None
+
+def get_new_username(location):
+    """Prompt for new username"""
+    username = input("What is your name? ")
+    values = json.dumps(username)
+    location.write_text(values)
+    return username
+
     
 def greet_user():
     """Greet the user by name."""
@@ -22,10 +30,8 @@ def greet_user():
     if username:
         print(f"Welcome back, {username}!")
     else:
-        username = input("What is your name? ")
-        values = json.dumps(username)
-        location.write_text(values)
+        username = get_new_username(location)
         print(f"We'll remember youu when you come back, {username}!")
-        
+
 
 greet_user()
